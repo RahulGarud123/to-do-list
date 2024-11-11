@@ -5,17 +5,22 @@ const List = (props) => {
   return (
     <>
       <div className="container py-2 ">
-        <select
-          className="form-select"
-          name="status"
-          defaultValue=""
-          onChange={props.handleCheckStatus}
-        >
-          <option value="All">All</option>
-          <option value="Todo">Todo</option>
-          <option value="InProgress">InProgress</option>
-          <option value="Completed">Completed</option>
-        </select>
+        <div className="col-3 d-flex justify-content-between align-items-center">
+          <p className="fs-10">Search By Status</p>
+        </div>
+        <div className="col-3 d-flex justify-content-between align-items-center">
+          <select
+            className="form-select"
+            name="status"
+            defaultValue=""
+            onChange={props.handleCheckStatus}
+          >
+            <option value="All">All</option>
+            <option value="Todo">Todo</option>
+            <option value="InProgress">InProgress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
       </div>
       <div className="container py-2 ">
         {props.deleteMessage ? (
